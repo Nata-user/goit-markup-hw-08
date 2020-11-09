@@ -1,0 +1,145 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+}
+
+.form-1 {
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+  border-radius: 4px;
+  color: #757575;
+}
+.modal-comment {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-field-wrapper {
+    color: black;
+  }
+  &-input-1 {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding-left: 16px;
+    background-color: #2f303a;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 10px;
+    padding-right: 10px;
+    margin-top: 4px;
+  }
+
+  & .for-contact {
+    padding-bottom: 12px;
+    padding-top: 52px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    height: 23px;
+  }
+
+  &-field,
+  &-message {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+  }
+
+  &-field {
+    display: block;
+    position: relative;
+    width: 448px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &-input:focus,
+  &-message:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+  }
+
+  &-input:focus + &-svg-icon {
+    fill: #2196f3;
+  }
+
+  &-input {
+    display: block;
+    width: 90%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    margin-top: 4px;
+  }
+
+  &-message {
+    width: 416px;
+    height: 96px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 40px;
+    margin-top: 4px;
+    margin-left: 16px;
+  }
+
+  &-text {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  &-svg-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+  }
+
+  &-policy-label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 15px;
+      outline: 1px solid #212121;
+      margin-right: 7px;
+
+      &:hover {
+        outline: 1px solid #2196f3;
+      }
+    }
+  }
+
+  &-policy:checked + &-policy-label::before {
+    background-color: #2196f3;
+    outline: 1px solid #2196f3;
+    background-image: url("../images/svg-for-sprite/icon-check.svg");
+  }
+}
